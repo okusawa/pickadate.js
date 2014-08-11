@@ -64,8 +64,7 @@ $( '#date_demo__translations_rtl' ).pickadate({
 $( '#date_demo__buttons' ).pickadate({
     // Any false-y value will hide the button.
     today: '',
-    clear: 'Clear selection',
-    close: 'Cancel'
+    clear: 'Clear selection'
 })
 
 
@@ -275,6 +274,16 @@ $( '#date_demo__container' ).pickadate({
  * Date picker events
  */
 $( '#date_demo__events' ).pickadate({
+    monthsFull: [ '1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月' ],
+    monthsShort: [ '1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月' ],
+    weekdaysFull: [ '日曜日', '月曜日', '火曜日', '水曜日', '木曜日', '金曜日', '土曜日' ],
+    weekdaysShort: [ '日曜日', '月曜日', '火曜日', '水曜日', '木曜日', '金曜日', '土曜日' ],
+    today: '今日',
+    clear: '消去',
+    firstDay: 1,
+    format: 'yyyy mm dd',
+    formatSubmit: 'yyyy/mm/dd',
+
     onStart: function() {
         console.log( 'Hello there :)' )
     },
@@ -1340,6 +1349,16 @@ $( '#button__api-object--holder' ).on( 'click', function( event ) {
  * Initialize all the others
  */
 $( '.js__datepicker' ).pickadate({
+    monthsFull: [ '1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月' ],
+    monthsShort: [ '1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月' ],
+    weekdaysFull: [ '日曜日', '月曜日', '火曜日', '水曜日', '木曜日', '金曜日', '土曜日' ],
+    weekdaysShort: [ '日', '月', '火', '水', '木', '金', '土' ],
+    today: '今日',
+    clear: false,
+    close: '閉じる',
+    format: 'yyyy/mm/dd(ddd)',
+
+    formatSubmit: 'yyyy-mm-dd',
 
     // Work-around for some mobile browsers clipping off the picker.
     onOpen: function() { $('pre').css('overflow', 'hidden') },
