@@ -1349,15 +1349,17 @@ $( '#button__api-object--holder' ).on( 'click', function( event ) {
  * Initialize all the others
  */
 $( '.js__datepicker' ).pickadate({
+    min: true,
+    max: new Date(2014, 9, 10),
+
     monthsFull: [ '1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月' ],
     monthsShort: [ '1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月' ],
     weekdaysFull: [ '日曜日', '月曜日', '火曜日', '水曜日', '木曜日', '金曜日', '土曜日' ],
     weekdaysShort: [ '日', '月', '火', '水', '木', '金', '土' ],
     today: '今日',
-    clear: false,
+    clear: 'クリア',
     close: '閉じる',
     format: 'yyyy/mm/dd(ddd)',
-
     formatSubmit: 'yyyy-mm-dd',
 
     // Work-around for some mobile browsers clipping off the picker.
