@@ -61,12 +61,13 @@
 
     <script type="text/javascript">
 
-        var $input = $( '.datepicker' ).pickadate(/*{
-            firstDay: 1
-        }*/)
+        var $input = $( '.datepicker' ).pickadate({
+            formatSubmit: 'yyyy-mm-dd',
+            min: true
+        })
 
         var picker = $input.pickadate('picker')
-        picker.set('select', '14 October, 2014')
+        // picker.set('select', true)
         picker.open()
 
         // $('button').on('click', function() {
